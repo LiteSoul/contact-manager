@@ -2,11 +2,28 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 export default class Contact extends Component {
+	state = {
+		expandContactDetails: true
+	}
+
+	onShowClick = (e) => {
+		this.setState({
+			expandContactDetails: !this.state.expandContactDetails
+		})
+	}
+
 	render() {
 		const { name, email, phone } = this.props.contact
 		return (
 			<div className="card card-body mb-3">
-				<h4>{name}</h4>
+				<p className="primary">
+					{name}
+					<i
+						onClick={this.onShowClick}
+						className="fas fa-sort-down mr-auto"
+					>
+					</i>
+				</p>
 				<ul className="list-group">
 					<li className="list-group-item">Email: {email}</li>
 					<li className="list-group-item">Phone: {phone}</li>
@@ -16,6 +33,6 @@ export default class Contact extends Component {
 	}
 }
 
-Contact.PropTypes = {
+Contact.propTypes = {
 	contact: PropTypes.object.isRequired
 }
