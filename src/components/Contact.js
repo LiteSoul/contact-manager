@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export default class Contact extends Component {
 	state = {
-		expandContactDetails: true
+		expandContactDetails: false
 	}
 
 	onShowClick = (e) => {
@@ -14,6 +14,8 @@ export default class Contact extends Component {
 
 	render() {
 		const { name, email, phone } = this.props.contact
+		const { expandContactDetails } = this.state
+
 		return (
 			<div className="card card-body mb-3">
 				<p className="primary">
@@ -24,10 +26,13 @@ export default class Contact extends Component {
 					>
 					</i>
 				</p>
-				<ul className="list-group">
-					<li className="list-group-item">Email: {email}</li>
-					<li className="list-group-item">Phone: {phone}</li>
-				</ul>
+				{expandContactDetails ?
+					<ul className="list-group">
+						<li className="list-group-item">Email: {email}</li>
+						<li className="list-group-item">Phone: {phone}</li>
+					</ul>
+					: null
+				}
 			</div>
 		)
 	}
