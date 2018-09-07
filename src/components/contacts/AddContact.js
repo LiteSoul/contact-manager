@@ -7,7 +7,9 @@ export default class AddContact extends Component {
 		phone: ''
 	}
 
-	onChange = e => this.setState({ [e.target.name]: e.targe.value })
+	onChange = e => {
+		this.setState({ [e.target.name]: e.target.value })
+	}
 
 	onSubmit = e => {
 		e.preventDefault()
