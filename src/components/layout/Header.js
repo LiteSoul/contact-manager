@@ -12,7 +12,7 @@ const Header = props => {
 							<a href="/" className="nav-link">Home</a>
 						</li>
 						<li className="nav-item">
-							<a href="/" className="nav-link">Contact</a>
+							<a href="/" className="nav-link">About</a>
 						</li>
 					</ul>
 				</div>

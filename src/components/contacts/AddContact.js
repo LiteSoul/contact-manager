@@ -17,7 +17,7 @@ export default class AddContact extends Component {
 	render() {
 		const { name, email, phone } = this.state
 		return (
-			<div className='card mb-3'>
+			<div className="card mb-3">
 				<div className="card-header">Add Contact</div>
 				<div className="card-body">
 					<form onSubmit={this.onSubmit}>
@@ -25,7 +25,7 @@ export default class AddContact extends Component {
 							<label htmlFor="name">Name</label>
 							<input
 								type="text"
-								name='name'
+								name="name"
 								className="form-control form-control-lg"
 								placeholder='Enter Name...'
 								value={name}
@@ -36,9 +36,9 @@ export default class AddContact extends Component {
 							<label htmlFor="email">Email</label>
 							<input
 								type="email"
-								name='email'
+								name="email"
 								className="form-control form-control-lg"
-								placeholder='Enter Email...'
+								placeholder="Enter Email..."
 								value={email}
 								onChange={this.onChange}
 							/>
@@ -47,9 +47,9 @@ export default class AddContact extends Component {
 							<label htmlFor="phone">Phone</label>
 							<input
 								type="text"
-								name='phone'
+								name="phone"
 								className="form-control form-control-lg"
-								placeholder='Enter Phone...'
+								placeholder="Enter Phone..."
 								value={phone}
 								onChange={this.onChange}
 							/>
@@ -57,7 +57,7 @@ export default class AddContact extends Component {
 						<input
 							type="submit"
 							value="Add Contact"
-							className='btn btn-light btn-block'
+							className="btn btn-light btn-block"
 						/>
 					</form>
 				</div>
